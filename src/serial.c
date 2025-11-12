@@ -1,3 +1,23 @@
+/**
+ 
+* COP4600 Project 2 – Multithreaded Text Compression
+* Group Members:
+* Tien Nguyen (U62965888)
+* James Huynh (U64017788)
+* Anthony Saade (U91712971)
+*
+* Description:
+* Implements a multithreaded version of the text compression tool using pthreads.
+* Each thread compresses one .txt file independently with zlib, storing results
+* 8 in a shared results array. The main thread merges outputs in lexicographic order.
+*
+* Speedup Results:
+* books: 4.58× (2.29s → 0.50s)
+* books2: 4.32× (1.60s → 0.37s)
+* Compression Rates: 87.73% and 89.38%
+* Environment: macOS (Apple M2, gcc via clang), pthreads, zlib*/
+
+
 #include <dirent.h> 
 #include <stdio.h> 
 #include <assert.h>
